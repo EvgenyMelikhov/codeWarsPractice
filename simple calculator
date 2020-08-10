@@ -1,0 +1,13 @@
+// https://www.codewars.com/kata/5810085c533d69f4980001cf
+function calculator(a,b,sign){
+  let res;
+  const phrase = 'unknown value';
+  switch(sign) {
+      case "+": res = a + b; break;
+      case "-": res = a - b; break;
+      case "*": res = a * b; break;
+      case "/": res = a / b; break;
+      default: res = phrase;
+      }
+  return typeof(a) === 'number' && typeof(b) === 'number' ? res : phrase;
+}
