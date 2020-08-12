@@ -1,0 +1,11 @@
+// https://www.codewars.com/kata/558f9f51e85b46e9fa000025/solutions/javascript
+function differenceOfSquares(n){
+ sumOfSqr = 0;
+  sum = 0;
+  while (n >= 1) {
+    sum += n;
+    sumOfSqr += n ** 2;
+    n--;
+  }
+  return sum ** 2 - sumOfSqr;
+ }
