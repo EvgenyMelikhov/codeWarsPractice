@@ -1,0 +1,9 @@
+// https://www.codewars.com/kata/55b051fac50a3292a9000025/solutions/javascript
+var FilterString = function(value) {
+  let strFiltered = '';
+  for (i = 0; i < value.length; i++) {
+    if (isNaN(value[i]) === false)
+      strFiltered += value[i];
+  }
+  return +strFiltered;
+}
