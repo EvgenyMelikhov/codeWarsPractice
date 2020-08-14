@@ -1,0 +1,12 @@
+// https://www.codewars.com/kata/5b4e779c578c6a898e0005c5
+function drawStairs(n) {
+  let draw = 'I\n';
+  let lastStep;
+  if (n === 1) return 'I';
+  if (n === 2) return 'I\n' + ' I'
+  else for(let i = 3; i <= n; i++) {
+    draw += ' '.repeat(i - 3) + ' I\n';
+    lastStep = ' '.repeat(i - 2) + ' I';
+    }
+  return draw + lastStep;
+}
