@@ -1,0 +1,6 @@
+// https://www.codewars.com/kata/5865cff66b5699883f0001aa/solutions/javascript
+function toTime(seconds) {
+  let hours = Math.floor(seconds / 3600);
+  let min = Math.floor((seconds - hours * 3600) / 60);
+  return `${hours} hour(s) and ${min} minute(s)`;
+}
