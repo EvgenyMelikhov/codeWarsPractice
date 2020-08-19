@@ -1,0 +1,13 @@
+// https://www.codewars.com/kata/58f8a3a27a5c28d92e000144/
+function firstNonConsecutive(arr) {
+  let k = 0;
+  while (k < arr.length - 1) {
+    if (arr[k] + 1 !== arr[k + 1]) {
+      return arr[k + 1];
+      break;
+    } else {
+      k++;
+    }
+  }
+  return null;
+}
