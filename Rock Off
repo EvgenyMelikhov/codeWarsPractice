@@ -1,0 +1,12 @@
+// https://www.codewars.com/kata/5b097da6c3323ac067000036
+function solve(a, b) {
+  let sA = 0;
+  let sB = 0;
+  for (i = 0; i < 3; i++) {
+    if (a[i] === b[i]) {continue}
+    else if (a[i] > b[i]) {sA += 1;}
+    else sB += 1;
+    }
+return `${sA}, ${sB}: ` + (sA === sB ? `that looks like a "draw"! Rock on!` :
+        sA > sB ? `Alice made "Kurt" proud!` : `Bob made "Jeff" proud!`);
+}
