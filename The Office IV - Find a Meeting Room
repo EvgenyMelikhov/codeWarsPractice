@@ -1,0 +1,5 @@
+// https://www.codewars.com/kata/57f604a21bd4fe771b00009c
+function meeting(x){
+  const a = x.indexOf('O');
+  return a > - 1 ? a : 'None available!';
+}
