@@ -1,0 +1,6 @@
+// https://www.codewars.com/kata/570597e258b58f6edc00230d
+function array(arr){
+  let arr1 = arr.replace(/,/gi, ' ').split(' ').filter(el => el != '');
+  if (arr1.length <= 2) return null;
+  else return arr1.slice(1, -1).join(' ');
+}
