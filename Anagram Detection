@@ -1,0 +1,10 @@
+// https://www.codewars.com/kata/529eef7a9194e0cbc1000255
+var isAnagram = function(test, original) {
+  if (test.length !== original.length) return false;
+  let sumTest = 0, sumOriginal = 0;
+  for (let i = 0; i < test.length; i++) {
+    sumTest += test[i].toLowerCase().codePointAt();
+    sumOriginal += original[i].toLowerCase().codePointAt();
+  }
+  return sumTest === sumOriginal;
+};
