@@ -1,0 +1,16 @@
+// pasv JS Practice Course Split
+function wordsInColumn(text){
+
+  let arrText = text.split(' '), arrLength = [];
+  for (let i = 0; i < arrText.length; i++) {
+    arrLength.push(arrText[i].length);
+  }
+
+  const margin = Math.max(...arrLength);
+  let textFin = '';
+  for (let i = 0; i < arrText.length; i++) {
+    textFin += `${' '.repeat(margin - arrText[i].length)}${arrText[i]}\n`;
+  }
+
+  return textFin.slice(0, textFin.length - 1);
+}
