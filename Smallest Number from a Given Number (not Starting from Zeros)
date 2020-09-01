@@ -1,0 +1,20 @@
+// pasv JS Practice Course Split lesson
+function changeDigitsOrder(num){
+  let arrNum = num.toString().split(''), arrNew = [];
+  let countZero = 0;
+
+  for (let i = 0; i < arrNum.length; i++) {
+    if (arrNum[i] == 0) countZero++
+    else arrNew.push(arrNum[i]);
+  }
+
+  let arrFin = arrNew.sort((a, b) => a - b).join('').slice(1).split('');
+
+  for (let j = 0; j < countZero; j++) {
+    arrFin.unshift('0');
+  }
+
+  arrFin.unshift(arrNew[0]);
+
+  return +arrFin.join('');
+}
