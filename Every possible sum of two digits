@@ -1,0 +1,10 @@
+// https://www.codewars.com/kata/5b4e474305f04bea11000148
+function digits(num){
+  let arrN = [...num + ''], res = [];
+  for (let i = 0; i < arrN.length; i++) {
+    for (let j = i + 1; j < arrN.length; j++) {
+      res.push(+arrN[i] + +arrN[j]);
+    }
+  }
+  return res;
+}
