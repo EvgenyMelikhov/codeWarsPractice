@@ -1,0 +1,5 @@
+// https://www.codewars.com/kata/5aee86c5783bb432cd000018
+function hydrate(s) {
+  let sum = s.match(/[1-9]/g).reduce((acc, curr) => +acc + +curr);
+  return sum + (sum == 1 ? ' glass' : ' glasses') + ' of water';
+}
