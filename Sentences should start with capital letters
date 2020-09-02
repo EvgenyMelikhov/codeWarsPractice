@@ -1,0 +1,2 @@
+// https://www.codewars.com/kata/5bf774a81505a7413400006a
+const fix = paragraph => paragraph.replace(/^\w|\.\s\w/g, paragraph => paragraph.toUpperCase());
