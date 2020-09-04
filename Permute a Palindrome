@@ -1,0 +1,17 @@
+// https://www.codewars.com/kata/58ae6ae22c3aaafc58000079
+function permuteAPalindrome (input) {
+  let arr = [...input.toLowerCase().replace(/\s/g, '')];
+
+  const result = arr.reduce((acc, rec, index) => {
+    return (typeof acc[rec] !== 'undefined')
+      ? { ...acc, [rec] : acc[rec] + 1}
+      : { ...acc, [rec] : 1 }
+}, {})
+
+  let countOdd = 0;
+  for (let key in result) {
+    if(result[key] % 2 != 0) countOdd++;
+  }
+
+  return countOdd <= 1;
+}
