@@ -1,0 +1,6 @@
+// https://www.codewars.com/kata/5828713ed04efde70e000346
+const countLanguages = list => {
+  let obj = {};
+  list.forEach(el => obj[el.language] = (obj[el.language] || 0) + 1);
+  return obj;
+}
