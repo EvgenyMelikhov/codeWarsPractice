@@ -1,0 +1,3 @@
+// https://www.codewars.com/kata/5b047875de4c7f9af800011b
+const sentence = List => List.sort((a, b) => Object.keys(a) - Object.keys(b)).
+                              map(el => Object.values(el)[0]).join(' ');
