@@ -1,0 +1,9 @@
+// https://www.codewars.com/kata/5dd5128f16eced000e4c42ba
+function solve(st) {
+  let obj = {};
+  for (let i = 0; i < st.length; i++) {
+    obj[st[i]] = st.lastIndexOf(st[i]) - st.indexOf(st[i]);
+  }
+
+  return Object.keys(obj).sort().find(key => obj[key] === Math.max(...Object.values(obj)));
+}
