@@ -1,0 +1,8 @@
+// https://www.codewars.com/kata/526989a41034285187000de4
+function ipsBetween(start, end){
+  const arr = (start + '.' + end).split('.'), arr2 = [];
+  for (let i = arr.length - 1; i >= arr.length / 2; i--) {
+    arr2.unshift(+arr[i] - arr[i - 4]);
+  }
+  return arr2.reduce((acc, curr, i) => acc + curr * Math.pow(256, 3 - i), 0);
+}
