@@ -1,0 +1,19 @@
+// https://www.codewars.com/kata/51fc12de24a9d8cb0e000001
+function validISBN10(isbn) {
+    let countX = 0, indexX = isbn.indexOf('X');
+
+    for (let i = 0; i < isbn.length; i++) {
+      if (isbn[i] === 'X')
+        countX++;
+    }
+
+    let isbnX = 0;
+
+    if (countX > 1 || countX == 1 && indexX != 9 || isbn.length != 10) return false
+    else {
+      isbn = isbn.replace('X', '');
+      if (countX != 0) isbnX = 100;
+      }
+
+    return (isbnX + [...isbn].reduce((acc, curr, i) => +acc + +curr * (i + 1))) % 11 == 0;
+}
